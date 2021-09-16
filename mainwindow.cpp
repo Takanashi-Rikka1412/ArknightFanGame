@@ -171,10 +171,10 @@ void MainWindow::initialize()
 
 
     playlist = new QMediaPlaylist;
-    playlist->addMedia(QUrl::fromLocalFile("../OurGame/music/bgm_title.mp3"));
-    playlist->addMedia(QUrl::fromLocalFile("../OurGame/music/bgm_firststory.mp3"));
-    playlist->addMedia(QUrl::fromLocalFile("../OurGame/music/bgm_battle.mp3"));
-    playlist->addMedia(QUrl::fromLocalFile("../OurGame/music/bgm_last.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("../ArknightFanGame/music/bgm_title.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("../ArknightFanGame/music/bgm_firststory.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("../ArknightFanGame/music/bgm_battle.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("../ArknightFanGame/music/bgm_last.mp3"));
 
 
     playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
@@ -1764,7 +1764,7 @@ void MainWindow::gameOver()
 void MainWindow::save(int level)
 {
 
-    QFile f("../OurGame/file/mapchoose.txt");
+    QFile f("../ArknightFanGame/file/mapchoose.txt");
 
 
     //写入已通过的最大关卡
@@ -1783,7 +1783,7 @@ void MainWindow::save(int level)
 //读档
 int MainWindow::load()
 {
-    QFile f("../OurGame/file/mapchoose.txt");
+    QFile f("../ArknightFanGame/file/mapchoose.txt");
     if(!f.open(QIODevice::ReadOnly | QIODevice::Text))
        qDebug()<< "Open failed." << endl;
     QTextStream txtInput(&f);
